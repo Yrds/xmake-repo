@@ -8,7 +8,7 @@ package("tclap")
              "https://git.code.sf.net/p/tclap/code.git")
 
     add_versions("v1.2.5", "7e87d13734076fa4f626f6144ce9a02717198b3f054341a6886e2107b048b235")
-    add_versions("v1.4.0-rc1", "799a8b1f99818e39fee19d0601030770af1221e1")
+    add_versions("v1.4.0-rc1", "8b68004828eb9ac522cf9a1da8f9ee293e5625778b1c85eb102c6b2dd7ab9208")
 
     on_install(function (package)
         os.cp("include/tclap", package:installdir("include"))

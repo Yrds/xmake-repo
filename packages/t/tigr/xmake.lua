@@ -4,7 +4,7 @@ package("tigr")
     set_description("TIGR - the TIny GRaphics library for Windows, macOS, Linux, iOS and Android.")
     set_license("UNLICENSE")
 
-    add_urls("https://github.com/erkkah/tigr/archive/refs/tags/($version).tar.gz")
+    add_urls("https://github.com/erkkah/tigr/archive/refs/tags/$(version).tar.gz")
 
     add_versions("v3.2.2", "")
 

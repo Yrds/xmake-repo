@@ -21,7 +21,7 @@ package("tigr")
                 elseif is_plat("macosx") then
                     add_frameworks("OpenGL")
                 elseif is_plat("linux") then
-                    add_syslinks("GL", "X11",)
+                    add_syslinks("GL", "X11")
                 end
         ]])
         import("package.tools.xmake").install(package)

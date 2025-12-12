@@ -6,7 +6,7 @@ package("tigr")
 
     add_urls("https://github.com/erkkah/tigr/archive/refs/tags/$(version).tar.gz")
 
-    add_versions("v3.2.2", "")
+    add_versions("v3.2.2", "7a76039b")
 
     on_install(function (package)
         os.cp("tigr.h", package:installdir("include/tigr.h"))

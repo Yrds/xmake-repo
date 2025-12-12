@@ -15,7 +15,14 @@ package("tigr")
                 set_kind("$(kind)")
                 set_languages("c++11")
                 add_files("tigr.c")
-                add_headerfiles("tigr.h")
+                if is_plat("windows", "mingw") then
+                    set_basename(is_kind("shared") and "glew32" or "glew32s")
+                    add_syslinks("opengl32", "gdi32")
+                elseif is_plat("macosx") then
+                    add_frameworks("OpenGL")
+                elseif is_plat("linux") then
+                    add_syslinks("GL", "X11",)
+                end
         ]])
         import("package.tools.xmake").install(package)
     end)

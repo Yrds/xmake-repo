@@ -15,6 +15,7 @@ package("tigr")
                 set_kind("$(kind)")
                 set_languages("c++11")
                 add_files("tigr.c")
+                add_headerfiles("tigr.h")
                 if is_plat("windows", "mingw") then
                     set_basename(is_kind("shared") and "glew32" or "glew32s")
                     add_syslinks("opengl32", "gdi32")

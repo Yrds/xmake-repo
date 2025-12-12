@@ -9,5 +9,6 @@ package("tigr")
     add_versions("v3.2.2", "7a76039bf2afa0637b6e7ee31f8d8050ca192a5104bc53e6d14927cc50f64c12")
 
     on_install(function (package)
-        os.cp("tigr.h", package:installdir("include/tigr.h"))
+        os.cp("*.h", package:installdir("include"))
+        os.cp("build/libtigr.a", package:installdir("lib"))
     end)

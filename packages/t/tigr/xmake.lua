@@ -8,8 +8,11 @@ package("tigr")
 
     add_versions("v3.2.2", "7a76039bf2afa0637b6e7ee31f8d8050ca192a5104bc53e6d14927cc50f64c12")
 
-    on_install(function (package)
+    if is_plat("linux") then
         add_syslinks("X11", "GL")
+    end
+
+    on_install(function (package)
         io.writefile("xmake.lua", [[
             add_rules("mode.debug", "mode.release")
             target("tigr")
